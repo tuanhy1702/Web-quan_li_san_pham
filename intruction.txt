@@ -1,0 +1,40 @@
+1. Cài đặt phần mềm môi trường web (XAMPP/WAMP/Laragon)
+XAMPP là lựa chọn phổ biến nhất, vì nó tích hợp Apache, PHP, MySQL (MariaDB).
+Tải XAMPP tại: https://www.apachefriends.org/index.html
+Cài đặt XAMPP như phần mềm thông thường.
+2. Copy mã nguồn website sang máy mới
+Copy toàn bộ thư mục dự án (ví dụ: web_quan_li_san_pham) vào thư mục htdocs của XAMPP trên máy mới.
+Thường là: C:\xampp\htdocs\web_quan_li_san_pham
+3. Sao lưu và phục hồi cơ sở dữ liệu (database)
+Trên máy cũ:
+Mở phpMyAdmin (http://localhost/phpmyadmin)
+Chọn database của bạn, nhấn Export để xuất file .sql.
+Trên máy mới:
+Mở phpMyAdmin (http://localhost/phpmyadmin)
+Tạo database mới (tên giống như cũ).
+Chọn database vừa tạo, nhấn Import và chọn file .sql vừa xuất.
+4. Cấu hình kết nối database
+Mở file cấu hình kết nối database (thường là config.php, db.php hoặc trong thư mục config).
+Đảm bảo các thông tin như sau:
+Host: localhost
+Username: root
+Password: (mặc định XAMPP là rỗng)
+Database: tên database bạn vừa import
+Ví dụ:
+Apply to index.php
+5. Chạy website trên máy mới
+Mở trình duyệt và truy cập:
+Apply to index.php
+Nếu có lỗi, kiểm tra lại:
+Đường dẫn file
+Kết nối database
+Các extension PHP cần thiết (như pdo_mysql)
+6. (Nếu có upload ảnh)
+Đảm bảo thư mục uploads (nếu có) cũng được copy sang máy mới và phân quyền ghi nếu cần.
+Tóm tắt các bước:
+Cài XAMPP (hoặc WAMP/Laragon)
+Copy mã nguồn vào htdocs
+Export/Import database qua phpMyAdmin
+Sửa file cấu hình kết nối database nếu cần
+Truy cập website qua http://localhost/tên_thư_mục/
+Nếu bạn gặp lỗi cụ thể nào trong quá trình cài đặt, hãy gửi thông báo lỗi để mình hỗ trợ chi tiết hơn!
